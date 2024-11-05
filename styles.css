@@ -1,123 +1,216 @@
-.calendar-container {
+/* General */
+body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-color: #ffffff;
     margin: 0;
-    background-color: #f3f3f3;
+    padding: 0;
+}
+
+/* Encabezado */
+.header {
+    background-color: #09548a;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+/* Contenedor del calendario */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Título del mes */
 .month-title {
     text-align: left;
     font-weight: bold;
-    font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 18px;
+    color: #09548a;
     width: 90%;
     max-width: 800px;
-    padding-left: 5px;
+    padding: 10px 0;
 }
 
+/* Tabla del calendario en escritorio */
 .calendar {
     width: 90%;
     max-width: 800px;
     border-collapse: collapse;
     margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
 }
 
-.calendar th,
+.calendar th {
+    background-color: #cfd8dc;
+    color: #333;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #09548a;
+    font-size: 14px;
+}
+
 .calendar td {
-    width: 14.28%; /* 7 columnas en total */
+    width: 14.28%;
     padding: 10px;
     border: 1px solid #e0e0e0;
     text-align: left;
     vertical-align: top;
-    font-size: 14px;
-    height: 100px;
     position: relative;
-    background-color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
-.calendar th {
-    background-color: #e03e52;
-    color: white;
-    padding: 0;
-    height: 40px;
-    text-align: center;
-    vertical-align: middle;
+.calendar td.grey {
+    background-color: #f0f0f0;
+}
+
+/* Hover para las celdas en escritorio */
+.calendar td:hover {
+    background-color: #e0f7fa;
+}
+
+/* Día y Eventos */
+.day-number {
     font-weight: bold;
     font-size: 14px;
-    line-height: 40px;
-    border-top: none;
-    border-bottom: 2px solid #e03e52;
+    color: #09548a;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
 
-.calendar td {
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-.calendar td:hover {
-    background-color: #f9f9f9;
-}
-
+/* Botón de evento en versión escritorio */
 .event {
     font-size: 12px;
     margin-top: 5px;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 4px;
-    color: black;
+    padding: 5px 10px;
+    background-color: #e0f7fa;
+    color: #09548a;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    width: 100%;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Efecto hover para los botones en escritorio */
 .event:hover {
-    background-color: #e03e52;
-    color: #fff;
+    background-color: #09548a;
+    color: #ffffff;
 }
 
-.day-number {
-    font-weight: bold;
-    position: absolute;
+/* Pie de página */
+.footer {
+    background-color: #09548a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin: 0 10px;
+}
+
+.footer-qr img {
+    height: 100px;
+}
+
+.footer-social {
     font-size: 12px;
-    color: #e03e52;
+    text-align: left;
 }
 
-/* Responsive styles */
+/* Responsivo */
 @media (max-width: 768px) {
     .calendar {
-        display: block; /* Cambia a bloque en pantallas pequeñas */
+        width: 100%;
     }
-
     .calendar th, .calendar td {
-        width: 100%; /* Cada celda ocupa el 100% */
         font-size: 12px;
-        padding: 5px;
-        box-sizing: border-box; /* Para asegurar el padding no sume al tamaño */
+        padding: 8px;
+        height: auto; /* Altura automática en móvil */
     }
-
     .month-title {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
+/* Vista móvil sin cajas y con enlaces en lugar de botones */
 @media (max-width: 480px) {
-    .calendar th, .calendar td {
-        font-size: 10px;
-        padding: 3px;
+    /* Oculta celdas vacías y mantiene solo eventos */
+    .calendar td:not(:has(.event)) {
+        display: none;
+    }
+
+    /* Diseño de lista para días con eventos */
+    .calendar {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Mayor separación entre los días */
+        width: 90%;
+    }
+
+    .calendar th {
+        display: none;
+    }
+
+    .calendar td {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0; /* Elimina el padding para apariencia más limpia */
+        border: none; /* Sin borde en la versión móvil */
+        background-color: transparent; /* Sin fondo para días en móvil */
+        height: auto; /* Altura automática para expandirse según el contenido */
+        margin-bottom: 20px; /* Espacio entre días para separarlos visualmente */
+        box-shadow: none; /* Elimina sombra para una apariencia limpia */
+    }
+
+    .day-number {
+        font-size: 16px;
+        color: #003366; /* Color distinto para diferenciar en móvil */
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    /* Enlaces simples en móvil */
+    .event {
+        font-size: 14px;
+        color: #09548a;
+        margin: 5px 0;
+        line-height: 1.6;
+        text-decoration: underline;
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        font-weight: bold;
+    }
+
+    .event:hover {
+        color: #003366;
     }
 
     .month-title {
         font-size: 18px;
+        color: #09548a;
+        margin-top: 20px;
     }
 }
