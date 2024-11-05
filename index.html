@@ -3,214 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario de Eventos</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <title>Calendario de Actividades de Navidad</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calendar-container">
-        <div class="month-title">Noviembre</div>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>Totes les activitats de Nadal a palmaactiva.com</h1>
+        <div class="icon-container">
+            <div class="icon">Corals</div>
+            <div class="icon">Pare Noel itinerant</div>
+            <div class="icon">Conta Contes</div>
+            <div class="icon">Patges Reials itinerant</div>
+            <div class="icon">Pintacares nadalenc</div>
+            <div class="icon">Xaranga</div>
+            <div class="icon">Flashmob</div>
+        </div>
+    </header>
+
+    <!-- Calendario -->
+    <main class="calendar-container">
+        <!-- Mes de Noviembre -->
+        <div class="month-title">Novembre</div>
         <table class="calendar">
             <thead>
                 <tr>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miércoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
-                    <th>Domingo</th>
+                    <th>Dilluns</th>
+                    <th>Dimarts</th>
+                    <th>Dimecres</th>
+                    <th>Dijous</th>
+                    <th>Divendres</th>
+                    <th>Dissabte</th>
+                    <th>Diumenge</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="day-number">25</td>
-                    <td class="day-number">26</td>
-                    <td class="day-number">27</td>
-                    <td class="day-number">28</td>
-                    <td class="day-number">29
-                        <a href="#" class="event">Conta Contes - Laura Cañellas (18:00-19:00)</a>
-                        <a href="#" class="event">Flashmob (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">30
-                        <a href="#" class="event">Pare Noel Itinerant (17:30-19:30)</a>
-                        <a href="#" class="event">Conta Contes - La Dama Encantada (18:00-19:00)</a>
-                        <a href="#" class="event">Coral - Palma Gospel Singers (18:30-19:30)</a>
-                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Conta Contes<br>Flashmob</td>
+                    <td>Pare Noel<br>Conta Contes<br>Coral</td>
                     <td></td>
                 </tr>
+                <!-- Añade más filas según sea necesario para noviembre -->
             </tbody>
         </table>
 
-        <div class="month-title">Diciembre</div>
+        <!-- Mes de Diciembre -->
+        <div class="month-title">Desembre</div>
         <table class="calendar">
             <thead>
                 <tr>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miércoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
-                    <th>Domingo</th>
+                    <th>Dilluns</th>
+                    <th>Dimarts</th>
+                    <th>Dimecres</th>
+                    <th>Dijous</th>
+                    <th>Divendres</th>
+                    <th>Dissabte</th>
+                    <th>Diumenge</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="day-number">1</td>
-                </tr>
-                <tr>
-                    <td class="day-number">2</td>
-                    <td class="day-number">3</td>
-                    <td class="day-number">4</td>
-                    <td class="day-number">5
-                        <a href="#" class="event">Coral - Coro Gaudete (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">6
-                        <a href="#" class="event">Pintacares Nadalenc (18:00-20:00)</a>
-                        <a href="#" class="event">Conta Contes - Laura Cañellas (18:00-19:00)</a>
-                        <a href="#" class="event">Flashmob (18:30-19:30)</a>
-                        <a href="#" class="event">Coral - Musicart Lloseta (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">7
-                        <a href="#" class="event">Pintacares Nadalenc (18:00-20:00)</a>
-                        <a href="#" class="event">Flashmob (18:30-19:30)</a>
-                        <a href="#" class="event">Coral - Coro Cantarte y Fundación Sa Nostra (18:30-19:30)</a>
-                        <a href="#" class="event">Xaranga (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">8</td>
-                </tr>
-                <tr>
-                    <td class="day-number">9</td>
-                    <td class="day-number">10</td>
-                    <td class="day-number">11</td>
-                    <td class="day-number">12
-                        <a href="#" class="event">Flashmob (18:30-19:30)</a>
-                        <a href="#" class="event">Coral - Coro Musicantes de Mallorca (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">13
-                        <a href="#" class="event">Pare Noel amb trineu (17:00-20:00)</a>
-                        <a href="#" class="event">Pare Noel Itinerant (17:00-19:30)</a>
-                        <a href="#" class="event">Pintacares Nadalenc (18:00-20:00)</a>
-                        <a href="#" class="event">Conta Contes - Laura Cañellas (18:00-19:00)</a>
-                        <a href="#" class="event">Xaranga (18:30-19:30)</a>
-                        <a href="#" class="event">Coral - Coro Escénico Optimus (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">14
-                        <a href="#" class="event">Pare Noel amb trineu (17:00-20:00)</a>
-                        <a href="#" class="event">Visita del Patge Reial (17:00-20:00)</a>
-                        <a href="#" class="event">Pare Noel Itinerant (17:30-19:30)</a>
-                        <a href="#" class="event">Pintacares Nadalenc (18:00-20:00)</a>
-                        <a href="#" class="event">Conta Contes - La Dama Encantada (18:00-19:00)</a>
-                        <a href="#" class="event">Xaranga (18:30-19:30)</a>
-                        <a href="#" class="event">Coral - Coro d’adults de Sant Francesc (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">15</td>
-                </tr>
-                <tr>
-                    <td class="day-number">16</td>
-                    <td class="day-number">17</td>
-                    <td class="day-number">18
-                        <a href="#" class="event">Coral - Cor de Pollensa (18:30-19:30)</a>
-                        <a href="#" class="event">Xaranga (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">19
-                        <a href="#" class="event">Pare Noel amb trineu (17:00-20:00)</a>
-                        <a href="#" class="event">Conta Contes - La Dama Encantada (18:00-19:00)</a>
-                    </td>
-                    <td class="day-number">20
-                        <a href="#" class="event">Pare Noel amb trineu (17:00-20:00)</a>
-                        <a href="#" class="event">Pare Noel Itinerant (17:00-19:30)</a>
-                        <a href="#" class="event">Pintacares Nadalenc (18:00-20:00)</a>
-                        <a href="#" class="event">Conta Contes - Laura Cañellas (18:00-19:00)</a>
-                        <a href="#" class="event">Xaranga (18:30-19:30)</a>
-                        <a href="#" class="event">Coral - Coro Agora Portals (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">21
-                        <a href="#" class="event">Pare Noel amb trineu (17:00-20:00)</a>
-                        <a href="#" class="event">Pare Noel Itinerant (17:30-19:30)</a>
-                        <a href="#" class="event">Pintacares Nadalenc (18:00-20:00)</a>
-                        <a href="#" class="event">Coral - Cor Dones Sant Francesc Inca (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">22
-                        <a href="#" class="event">Pare Noel Itinerant (17:30-19:30)</a>
-                        <a href="#" class="event">Coral - Grupo Motown Christmas y Grupo Coral (18:30-19:30)</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="day-number">23
-                        <a href="#" class="event">Pare Noel Itinerant (17:30-19:30)</a>
-                        <a href="#" class="event">Coral - Cor de Son Dameto y Cor de Dones de la UIB (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">24</td>
-                    <td class="day-number">25</td>
-                    <td class="day-number">26</td>
-                    <td class="day-number">27
-                        <a href="#" class="event">Visita al Patge Reial (17:00-20:00)</a>
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                        <a href="#" class="event">Coral - Cor de l’AUOM (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">28
-                        <a href="#" class="event">Visita al Patge Reial (17:00-20:00)</a>
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                        <a href="#" class="event">Coral - Cor Ciutat de Mallorca (18:30-19:30)</a>
-                    </td>
-                    <td class="day-number">29
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="day-number">30
-                        <a href="#" class="event">Visita al Patge Reial (17:00-20:00)</a>
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                    </td>
-                    <td class="day-number">31</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>Coral</td>
+                    <td>Pintacares<br>Conta Contes<br>Flashmob<br>Coral</td>
+                    <td>Pintacares<br>Flashmob<br>Xaranga<br>Coral</td>
                     <td></td>
                 </tr>
+                <!-- Añade más filas según sea necesario para diciembre -->
             </tbody>
         </table>
 
-        <div class="month-title">Enero</div>
+        <!-- Mes de Enero -->
+        <div class="month-title">Gener</div>
         <table class="calendar">
             <thead>
                 <tr>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miércoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
-                    <th>Domingo</th>
+                    <th>Dilluns</th>
+                    <th>Dimarts</th>
+                    <th>Dimecres</th>
+                    <th>Dijous</th>
+                    <th>Divendres</th>
+                    <th>Dissabte</th>
+                    <th>Diumenge</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td></td>
                     <td></td>
+                    <td>1</td>
+                    <td>Pintacares</td>
+                    <td>Patges Reials</td>
+                    <td>Patges Reials</td>
                     <td></td>
-                    <td class="day-number">1</td>
-                    <td class="day-number">2
-                        <a href="#" class="event">Visita al Patge Reial (17:00-20:00)</a>
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                    </td>
-                    <td class="day-number">3
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                    </td>
-                    <td class="day-number">4
-                        <a href="#" class="event">Patges Reials Itinerants (17:30-19:30)</a>
-                    </td>
                 </tr>
+                <!-- Añade más filas según sea necesario para enero -->
             </tbody>
         </table>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="logo-ajuntament.png" alt="Ajuntament de Palma">
+            <img src="logo-palmaactiva.png" alt="Palma Activa">
+        </div>
+        <div class="footer-qr">
+            <p>+ info activitats</p>
+            <img src="qr-code.png" alt="QR code">
+        </div>
+        <div class="footer-social">
+            <p>Vols conèixer-nos millor? <br>Segueix-nos en les nostres xarxes socials <br>@Palmaactiva</p>
+        </div>
+    </footer>
+
 </body>
 </html>
